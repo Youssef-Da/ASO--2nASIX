@@ -1,6 +1,6 @@
 # Fitxa 1 — Anàlisi inicial de MusicCloud
 
-**Nom i cognoms:** Youssef Dahmouni Sadki¡
+**Nom i cognoms:** Youssef Dahmouni Sadki
 **Data:** 17/09/2026 
 **Equip / parella:** N/A
 

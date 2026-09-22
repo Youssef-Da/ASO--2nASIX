@@ -242,22 +242,15 @@ Laia treballa al departament d'Administració, però també és la responsable d
 
 És suficient que pertanyi només al conjunt `Administració`?
 
-☐ Sí  
-☐ No
+No
 
 Per què?
 
----
-
----
+Perquè com a cap de departament necessita permisos addicionals a `gestio_departament` que la resta de membres del departament no tenen. Pertànyer només al grup general no li donaria aquest accés.
 
 Quina possible solució proposes?
 
----
-
----
-
----
+Crear un grup addicional específic, per exemple `GRP_CapAdministracio`, i afegir-hi Laia a més del grup general `GRP_Administracio`. Així acumula els permisos del departament i els permisos extra de responsable.
 
 # 9. Un altre cas
 
@@ -269,16 +262,11 @@ Campanya Estiu
 
 Creus que hauríem de canviar-les de departament?
 
-☐ Sí  
-☐ No
+No
 
 Si no, com podríem donar-los accés als recursos del projecte?
 
----
-
----
-
----
+Creant un grup específic per al projecte per exemple GRP_CampanyaEstiu que reculli els membres participants, independentment del seu departament d'origen, i assignant els permisos del recurs del projecte a aquest grup. Així mantenen el seu departament original i, a més, obtenen l'accés temporal al projecte.
 
 # 10. Conclusions
 

@@ -1,7 +1,9 @@
 # Fitxa 1 — Anàlisi inicial de MusicCloud
 
 **Nom i cognoms:** Youssef Dahmouni Sadki
+
 **Data:** 17/09/2026 
+
 **Equip / parella:** N/A
 
 ## Objectiu
@@ -27,39 +29,31 @@ Consulta la informació disponible sobre els departaments, treballadors i perfil
 
 Completa la taula següent.
 
-|Persona|Departament|Funció / responsabilitat|Necessita privilegis especials? Per què?|
+| Persona | Departament | Funció / responsabilitat | Necessita privilegis especials? Per què? |
 |---|---|---|---|
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+| Aina Ciurans | Direcció | Gestió general de l'empresa | Sí, accés total als recursos de Direcció|
+| Laia Macias | Cap d'Administració| Coordina el departament, factures/contractes | Sí, és l'única amb permisos de lectura i escritura a gestio_departament |
+| Dídac Gassó | Administració | Factures, contractes, documentació | No, accés estàndard del departament |
+| Lluïsa Richart | Cap del suport tècnic | Coordina incidències i manteniment | Sí, permis de lectura i escritura exclusiu agestio_departament i scripts |
+| Meritxell Reglat | Cap de producció musical | Coordina gestió de continguts | Sí, permis de lectura i escitura exclusiu a gestio_departament |
+| Talia Costas | Cap d'Informàtica | Suport i administració del sistema | Sí, accés ADM als recursos crítics com els backups, logs, configuracions etc... |
+| Alex Soriano | Informàtica | Suport tècnic del sistema | Sí, per la naturalesa tècnica del departament |
+| Pere Espinalt | Extern | Col·laboració puntual/externa | No, accés molt limitat, només a intercanvi |
+
 
 ### 1.1. Reflexió
 
 Quines diferències observes entre un **treballador**, un **departament** i una **funció o responsabilitat**?
 
----
+El treballador és la persona concreta, la identitat individual dins el sistema. El departament és el grup organitzatiu al qual pertany el treballador. I la funció o responsabilitat és el rol que exerceix un treballador, per exemple el cap de departament, que determina permisos concrets més enllà dels del departament.
 
----
 
----
-
-Hi ha persones que, pel seu càrrec o funció, necessiten accessos diferents dels altres membres del seu departament?
-
-☐ Sí  
-☐ No
+**Hi ha persones que, pel seu càrrec o funció, necessiten accessos diferents dels altres membres del seu departament?**
 
 Posa'n algun exemple:
 
----
+Sí per exemple els caps de departament que tenen accés exclusiu a gestio_departament, i el personal d'Informàtica, que té accés d'administrador a recursos de sistema que la resta de departaments no té.
 
----
-
----
 
 # 2. Recursos de l'empresa
 

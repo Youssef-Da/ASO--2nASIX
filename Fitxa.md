@@ -228,11 +228,11 @@ A partir de l'organització de l'empresa, proposa els primers conjunts de person
 
 |Nom proposat|Qui hi pertanyeria?|Per què existeix aquest conjunt?|
 |---|---|---|
-||||
-||||
-||||
-||||
-||||
+|GRP_Direccio|Aina Ciurans, Rut Tornil|Accés als recursos exclusius de Direcció|
+|GRP_Administracio|Dídac Gassó, Laia Macias|Accés als recursos compartits del departament d'Administració|
+|GRP_SuportTecnic|Estel Birosta, Aina Zuriguel, Lluïsa Richart|Accés als recursos del departament de Suport tècnic|
+|GRP_ProduccioMusical|Roser Alberch, Guillem Adella, Meritxell Reglat, Alícia Monclús, Carles Molins, Eulàlia Galcera| Accés als recursos del departament de Producció musical|
+|GRP_Informatica|Talia Costas, Alex Soriano|Accés ADM als recursos tècnics i de sistema|
 
 ---
 

@@ -61,14 +61,15 @@ Analitza l'estructura d'informació de MusicCloud.
 
 Classifica alguns dels recursos següents segons la seva finalitat.
 
-|Recurs|Qui creus que l'hauria d'utilitzar?|Per a què?|
+| Recurs | Qui l'hauria d'utilitzar? | Per a què? |
 |---|---|---|
-|`/empresa/comu/intercanvi`|||
-|`/empresa/comu/comunicats`|||
-|`/empresa/departaments/administracio/compartida`|||
-|`/empresa/departaments/administracio/gestio_departament`|||
-|`/empresa/projectes/campanya_estiu`|||
-|`/empresa/administracio_sistema/backups`|||
+| `/empresa/comu/intercanvi` | Tots els treballadors i usuaris externs | Intercanvi temporal de documents amb externs |
+| `/empresa/comu/comunicats` | Tots els treballadors (excepte externs) | Consultar comunicats interns de l'empresa |
+| `/empresa/departaments/administracio/compartida` | Treballadors d'Administració | Documents compartits del dia a dia del departament |
+| `/empresa/departaments/administracio/gestio_departament` | Cap d'Administració (Laia) | Gestió i validació de documents interns del departament |
+| `/empresa/projectes/campanya_estiu` | Membres assignats al projecte (de diversos departaments) | Treball col·laboratiu en el projecte transversal |
+| `/empresa/administracio_sistema/backups` | Informàtica | Gestió tècnica de còpies de seguretat del sistema |
+
 
 ---
 
@@ -91,12 +92,12 @@ No busquis encara una solució tècnica. Pensa només en les necessitats de l'em
 
 |Situació|Accés proposat|Justificació|
 |---|---|---|
-|Dídac accedeix a la carpeta compartida d'Administració|||
-|Laia accedeix a la gestió del departament d'Administració|||
-|Pere, treballador extern, accedeix als comunicats interns|||
-|Talia accedeix als backups del sistema|||
-|Un membre de Producció musical accedeix a la carpeta d'Administració|||
-|Un participant de `campanya_estiu` accedeix als fitxers del projecte|||
+|Dídac accedeix a la carpeta compartida d'Administració|L/E|És treballador del departament, necessita treballar amb els documents del dia a dia|
+|Laia accedeix a la gestió del departament d'Administració|L/E|És la cap, és l'única que ha de validar/gestionar documents interns|
+|Pere, treballador extern, accedeix als comunicats interns|NA|Els comunicats són informació interna, no destinada a externs|
+|Talia accedeix als backups del sistema|ADM|És cap d'Informàtica, responsable del manteniment tècnic|
+|Un membre de Producció musical accedeix a la carpeta d'Administració|NA|No pertany al departament, informació d'un altre àmbit|
+|Un participant de campanya_estiu accedeix als fitxers del projecte|L/E| És membre assignat al projecte transversal, necessita treballar-hi|
 
 ---
 

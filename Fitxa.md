@@ -206,25 +206,19 @@ Administració → carpeta_administracio → L/E
 
 Quin avantatge té aquesta solució respecte a donar permisos persona per persona?
 
----
-
----
+L'avantatge és que els permisos es defineixen una sola vegada per al conjunt, en lloc de repetir-los per a cada persona. Això redueix errors, estalvia temps i facilita el manteniment del sistema.
 
 ### 6.2.
 
 Si Dídac passa d'Administració a Producció musical, què caldria modificar?
 
----
-
----
+Només caldria treure'l del conjunt `Administració` i afegir-lo al conjunt `Producció musical`. Els permisos ja estan definits als conjunts, no cal tocar-los individualment.
 
 ### 6.3.
 
 Com anomenaries aquests conjunts de persones?
 
----
-
----
+Aquests conjunts ho anomenaria grups.
 
 # 7. Primera proposta per a MusicCloud
 

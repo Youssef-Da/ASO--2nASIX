@@ -274,25 +274,25 @@ Completa les frases amb les teves paraules.
 
 ### Usuari
 
-Un usuari representa:
+Un usuari representa: una persona concreta dins del sistema informàtic, amb una identitat pròpia que li permet autenticar-se i accedir als recursos que li corresponguin.
 
 ---
 
 ### Recurs
 
-Un recurs és:
+Un recurs és: qualsevol element del sistema carpeta, fitxer, servei... al qual els usuaris poden necessitar accedir per fer la seva feina.
 
 ---
 
 ### Permís
 
-Un permís determina:
+Un permís determina: quin tipus d'acció pot fer un usuari o grup sobre un recurs concret per exemple, només llegir, llegir i escriure, o administrar.
 
 ---
 
 ### Grup
 
-Un grup serveix per:
+Un grup serveix per: agrupar usuaris amb les mateixes necessitats d'accés i assignar-los els permisos de manera conjunta, facilitant la gestió i el manteniment del sistema.
 
 ---
 
@@ -306,17 +306,11 @@ Analitza aquesta afirmació:
 
 Explica amb les teves paraules què significa.
 
----
-
----
+Significa que a cada usuari se li han de donar únicament els accessos que necessita per a les seves tasques diàries, ni més ni menys. Evitar donar permisos per si de cas redueix riscos de seguretat i d'errors accidentals o intencionats.
 
 Posa un exemple relacionat amb MusicCloud.
 
----
-
----
-
----
+Un treballador de Producció musical no necessita accés a `/empresa/departaments/administracio`, ja que no forma part de les seves funcions, donar-li aquest accés violaria el principi de mínim privilegi.
 
 # 12. Pregunta final
 
@@ -324,8 +318,8 @@ Imagina que demà MusicCloud passa de 14 treballadors a 500.
 
 Quina de les dues estratègies consideres més adequada?
 
-☐ Assignar permisos individualment a cada usuari.
-
 ☐ Organitzar els usuaris segons les seves necessitats i assignar permisos a aquests conjunts.
 
 Justifica la resposta.
+
+Amb 500 treballadors, assignar permisos un per un seria inviable, massa temps, massa risc d'error i molt difícil de mantenir a llarg termini. Organitzant els usuaris en grups segons les seves necessitats, els permisos es gestionen de manera centralitzada, escalable, i els canvis es resolen simplement movent la persona d'un grup a un altre.

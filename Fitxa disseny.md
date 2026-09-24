@@ -13,15 +13,15 @@ Indica quins tipus d'objectes consideres que ha de contenir el servei de directo
 
 |Tipus d'objecte|Exemples a MusicCloud|
 |---|---|
-|Usuaris||
-|Grups||
-|Equips||
-|Servidors||
-|Comptes d'aplicacions o serveis||
+|Usuaris|Qualsevol treballador de l'empresa com Laia Macias, Roser Alberch|
+|Grups|Grups per gestionar permisos, com GR_Administrador|
+|Equips|Els departaments com Producció musical|
+|Servidors|Servidor de fitxers, servidor de backups, servidor web de la plataforma|
+|Comptes d'aplicacions o serveis|Compte del servei de backup, compte del servidor web, compte de la BBDD de backup|
 
 Hi afegiries algun altre tipus d'objecte?
 
----
+Sí, els ordinadors/equips i les carpetes compartides com a recursos.
 
 ---
 

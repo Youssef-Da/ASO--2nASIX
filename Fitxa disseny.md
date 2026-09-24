@@ -102,19 +102,18 @@ Indica:
 
 **En quina OU ubicaries el seu compte?**
 
----
+Estaria en la OU_Administració, perquè representa el seu departament real dins l'organització.
 
 **A quins grups podria pertànyer?**
 
----
+Podria pertanya al grup GRP_Administracio per tenir accés a les carpetes del departament i a GRP_CampanyaEstiu per tenir accés als recursos del projecte.
 
 ---
 
 ### Per què no és contradictori que estigui en una OU però pertanyi a diversos grups?
 
----
+Perquè la OU ens indica on està ubicat, la seva posició en l'organització, mentres que els grups indiquen a quines carpetes o recursos tenen accés
 
----
 
 ---
 
@@ -122,13 +121,13 @@ Indica:
 
 Explica breument què entens per **servei de directori**.
 
----
+El servei de directori és un sistema centralitzat que emmagatzema i organitza informació com els usuaris, grups, ordinadors, servidors... i ens permet consultarla, autenticarla i gestionarla des d'un únic punt.
 
 ---
 
 Quin problema resol a MusicCloud?
 
----
+Resol el problema d'haver de gestionar usuaris i permisos de manera dispersa a cada servidor o servei per separat. Tamnbé centralitza la informació dels usuaris i els accessos, facilitant l'administració.
 
 ---
 

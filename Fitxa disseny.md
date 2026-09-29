@@ -279,7 +279,7 @@ MusicCloud
 
 ## Criteri utilitzat per organitzar els objectes
 
-S'ha organitzat en OUs seguint l'estructura departamental real de l'empresa (reflectint l'organigrama), i separant clarament els objectes humans (usuaris) dels objectes tècnics (servidors, comptes de servei).
+S'ha organitzat en OUs seguint l'estructura departamental real de l'empresa reflectint l'organigrama, i separant clarament els objectes humans usuaris dels objectes tècnics servidors, comptes de servei.
 
 ---
 

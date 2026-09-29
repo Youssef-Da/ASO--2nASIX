@@ -244,19 +244,19 @@ Respon breument.
 
 ### a) Per què no seria una bona idea guardar tots els usuaris, grups, equips i servidors al mateix nivell sense organitzar-los?
 
----
+Seria molt difícil aplicar polítiques diferenciades, delegar l'administració, cercar objectes o mantenir el sistema a mesura que creix el nombre d'usuaris i recursos; augmentaria el desordre i el risc d'errors.
 
 ---
 
 ### b) Per què no hauríem d'utilitzar les OU per substituir els grups de permisos?
 
----
+Perquè un usuari només pot pertànyer a una OU, mentre que sovint necessita accedir a diversos recursos simultàniament (departament, projectes, rol especial). Els grups permeten aquesta pertinença múltiple de forma flexible; les OU no estan pensades per assignar permisos, sinó per organitzar i aplicar polítiques.
 
 ---
 
 ### c) Si MusicCloud passa de 14 a 500 treballadors, quina característica del disseny que has fet avui facilitarà més l'administració?
 
----
+La combinació d'OUs per departament que permeten delegar administració i aplicar polítiques per blocs amb grups per necessitat d'accés que permeten assignar permisos de manera centralitzada i escalable, en lloc de gestionar cada usuari individualment.
 
 ---
 
@@ -271,15 +271,18 @@ A partir de les decisions preses durant la sessió, deixa definida la proposta q
 ```text
 MusicCloud
 │
-│
-│
-│
+├── Usuaris (per departament)
+├── Grups (per accessos i projectes)
+├── Servidors
+└── ComptesServei
 ```
 
 ## Criteri utilitzat per organitzar els objectes
 
----
+S'ha organitzat en OUs seguint l'estructura departamental real de l'empresa (reflectint l'organigrama), i separant clarament els objectes humans (usuaris) dels objectes tècnics (servidors, comptes de servei).
 
 ---
 
 ## Criteri utilitzat per diferenciar OU i grups
+
+Les OU s'utilitzen per a la ubicació administrativa i l'aplicació de polítiques un objecte, una OU. Els grups s'utilitzen per a l'assignació de permisos i accessos a recursos, permetent que un mateix usuari pertanyi a múltiples grups segons les seves necessitats reals de treball.

@@ -137,11 +137,9 @@ Resol el problema d'haver de gestionar usuaris i permisos de manera dispersa a c
 
 Completa les frases següents.
 
-**LDAP és:**
+**LDAP és:** Un protocol estàndard que permet accedir i consultar informació emmagatzemada en un servei de directori.
 
----
-
-**LDAP no és:**
+**LDAP no és:** Un producte ni un servidor de directori concret tampoc és sinònim d'Active Directory, és el protocol que aquests utilitzen per comunicar-se.
 
 ---
 
@@ -149,10 +147,10 @@ Indica si les afirmacions són certes o falses.
 
 |Afirmació|C|F|
 |---|:-:|:-:|
-|LDAP és sinònim d'Active Directory|☐|☐|
-|LDAP permet accedir i consultar informació d'un directori|☐|☐|
-|OpenLDAP és una implementació d'un servei de directori|☐|☐|
-|Active Directory utilitza LDAP, entre altres tecnologies|☐|☐|
+|LDAP és sinònim d'Active Directory|☐|X|
+|LDAP permet accedir i consultar informació d'un directori|X|☐|
+|OpenLDAP és una implementació d'un servei de directori|X|☐|
+|Active Directory utilitza LDAP, entre altres tecnologies|X|☐|
 
 ---
 

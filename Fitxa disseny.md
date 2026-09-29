@@ -176,10 +176,40 @@ Ha de mostrar, com a mínim:
 ```text
 MusicCloud
 │
+├── Usuaris
+│   ├── Direccio
+│   ├── Administracio
+│   ├── SuportTecnic
+│   ├── ProduccioMusical
+│   ├── Informatica
+│   └── Externs
 │
+├── Grups
+│   ├── GRP_Direccio
+│   ├── GRP_Administracio
+│   ├── GRP_SuportTecnic
+│   ├── GRP_ProduccioMusical
+│   ├── GRP_Informatica
+│   ├── GRP_CapAdministracio
+│   ├── GRP_CampanyaEstiu
+│   └── GRP_Administradors
 │
+├── Equips
+│   ├── Direccio
+│   ├── Administracio
+│   ├── SuportTecnic
+│   ├── ProduccioMusical
+│   └── Informatica
 │
+├── Servidors
+│   ├── SRV_Fitxers
+│   ├── SRV_Backups
+│   └── SRV_Web
 │
+└── ComptesServei
+    ├── SVC_Backup
+    ├── SVC_BBDD
+    └── SVC_Web
 ```
 
 ---
@@ -190,23 +220,21 @@ Escull **dues decisions** del teu DIT que consideris importants i justifica-les.
 
 ### Decisió 1
 
----
+Separar els usuaris en OUs per departament.
 
 **Justificació:**
 
----
+Permet aplicar polítiques específiques per exemple, restriccions més estrictes a informàtica i delegar l'administració de cada OU al cap de departament, sense afectar la resta de l'organització.
 
 ---
 
 ### Decisió 2
 
----
+Crear una OU separada per als comptes de servidors i comptes de servei, independent de la dels usuaris.
 
 **Justificació:**
 
----
-
----
+Els comptes tècnics tenen una durada i unes polítiques de seguretat diferents dels usuaris humans, com les contrasenyes, auditoria, permisos entre altres. Separar-los evita aplicar-hi per error polítiques pensades per a persones i facilita la seva gestió tècnica.
 
 ---
 

@@ -1,0 +1,17 @@
+Si volem ordenar els serveis:
+
+    Get-Service
+        |
+        |
+        v
+     Resultat
+        |
+        v
+    Sort "CPU"
+        |
+        v
+ "Processos ordenats per "CPU""
+
+ La comanda seria: Get-Process | Sort-object CPU
+
+ 

@@ -21,3 +21,9 @@ Objectes    | Kerberos
 
 
 Distinguished = Com diferenciar el meu nom en un bosc de forma unica
+
+Kerberos: Protocol d'autenticació
+
+ldap:
+
+GC: 

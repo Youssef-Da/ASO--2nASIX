@@ -45,6 +45,11 @@ Completeu la taula següent:
 
 Localitzeu i utilitzeu el procediment adequat per instal·lar el rol AD DS i promocionar el servidor a controlador de domini. Documenteu breument les comandes o passos utilitzats.
 
+Instal·lació de l'AD:
+
+![alt text](image.png)
+
+
 ### Part 3. Promoció a controlador de domini
 Promocioneu el servidor a controlador de domini amb les opcions següents:
 
@@ -58,6 +63,11 @@ Promocioneu el servidor a controlador de domini amb les opcions següents:
 | Controlador de domini de només lectura | No                 |
 | Reinici final                          | Sí                 |
 Definiu una contrasenya segura per al mode de restauració de serveis de directori.
+
+Promoció de controladors:
+
+Test-ADDSForestInstallation -DomainName 'musiccloud.local' -DomainNetbiosName 'MUSICCLOUD' -InstallDns:$true
+
 ### Part 4. Verificació
 
 Després del reinici, comproveu:

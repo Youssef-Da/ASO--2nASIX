@@ -70,6 +70,13 @@ Test-ADDSForestInstallation -DomainName 'musiccloud.local' -DomainNetbiosName 'M
 
 ### Part 4. Verificació
 
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+
 Després del reinici, comproveu:
 
 1. Que el servidor s’anomena `SRV-AD-01`.

@@ -44,3 +44,13 @@ function Crear-OU {
         }
     }
 }
+
+
+if (Comprovar-Ruta -ruta $ruta) {
+
+    Crear-OU -nomOU $nomOU -ruta $ruta
+
+}
+else {
+    exit
+}

@@ -16,14 +16,13 @@ function Comprovar-Ruta {
         return $true
     }
     catch {
-        Write-Host "La ruta '$ruta' no existeix. Comprova la ruta i torna-ho a intentar."
         return $false
     }
 }
 
 function Crear-OU {
     param(
-        [string]$nom,
+        [string[]]$nomOU,
         [string]$ruta
     )
 
@@ -31,16 +30,17 @@ function Crear-OU {
 
         try {
             $OU = Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop
-            Write-Host "La OU '$nom' ja existeix a la ruta '$ruta'. No cal crear-la."
         }
         catch {
+            $OU = $null
+        }
+        if ($OU -eq $null) {    
             try {
                 New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction Stop
-                Write-Host "La OU '$nom' s'ha creat a la ruta '$ruta'."
             }
             catch {
-                Write-Host "No s'ha pogut crear la OU '$nom': $($_.Exception.Message)"
+                continue
             }
         }
-    } 
     }
+}

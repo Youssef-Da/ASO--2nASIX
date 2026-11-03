@@ -29,4 +29,4 @@ foreach ($nom in $nomOU) {
             Write-Host "No s'ha pogut crear la OU '$nom': $($_.Exception.Message)"
         }
     }
-}
+} 

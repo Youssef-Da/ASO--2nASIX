@@ -36,17 +36,36 @@ Completeu la taula següent:
 
 | Paràmetre        | Valor configurat |
 | ---------------- | ---------------- |
-| Adreça IP        |                  |
-| Màscara          |                  |
-| Porta d’enllaç   |                  |
-| DNS preferit     |                  |
-| Nom del servidor |                  |
+| Adreça IP        |   192.168.1.23    |
+| Màscara          |  255.255.255.0   |
+| Porta d’enllaç   |   192.168.1.1    |
+| DNS preferit     |   192.168.1.2    |
+| Nom del servidor |       SRV-AD-01  |
+
+Comandes utilitzades per instal·lar el servidor
+```
+Rename-Computer -NewName "SRV-AD-01" -Restart
+
+New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.1.23-PrefixLength 24 -DefaultGateway 192.168.1.1
+
+Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 192.168.1.2
+
+Set-TimeZone -Id "Romance Standard Time"
+Get-Date
+```
 ### Part 2. Instal·lació del rol AD DS
 
 Localitzeu i utilitzeu el procediment adequat per instal·lar el rol AD DS i promocionar el servidor a controlador de domini. Documenteu breument les comandes o passos utilitzats.
 
 Instal·lació de l'AD:
 
+Comandes:
+```
+Get-WindowsFeature AD-Domain-Services
+```
+```
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+```
 ![alt text](image.png)
 
 
@@ -66,7 +85,17 @@ Definiu una contrasenya segura per al mode de restauració de serveis de directo
 
 Promoció de controladors:
 
+Primer es fa una prova de requisits previs per comprova que es compleixen les condicions:
+
+```
 Test-ADDSForestInstallation -DomainName 'musiccloud.local' -DomainNetbiosName 'MUSICCLOUD' -InstallDns:$true
+```
+
+Després fem la promoció:
+
+```
+Install-ADDSForest -DomainName "musiccloud.local" -DomainNetbiosName "MUSICCLOUD" -InstallDns:$true
+```
 
 ### Part 4. Verificació
 
@@ -94,28 +123,39 @@ Completeu la taula següent. Adjunta la comanda que has utilitzat per a cada una
 
 | Comprovació                          | Resultat |
 | ------------------------------------ | -------- |
-| Nom del servidor                     |          |
-| IP fixa configurada                  |          |
-| AD DS instal·lat                     |          |
-| Domini creat                         |          |
-| DNS instal·lat                       |          |
-| Resolució de `musiccloud.local`      |          |
-| Eines d’Active Directory disponibles |          |
+| Nom del servidor                     | SRV-AD-01|
+| IP fixa configurada                  |     X     |
+| AD DS instal·lat                     |     X     |
+| Domini creat                         | DNSRoot: musiccloud.local i NetBIOSName: MUSICCLOUD        |
+| DNS instal·lat                       |      X   |
+| Resolució de `musiccloud.local`      | Retorna l'adreça IP del servidor|
+| Eines d’Active Directory disponibles | Mòdul ActiveDirectory disponible  |
 
 ## Preguntes
 
 Responeu breument:
 
 1. Per què `SRV-AD-01` necessita una IP fixa?
+
+>Perquè és el controlador de domini i el servidor DNS, els clients i els altres servidors el localitzen per la seva IP. Si l'adreça canviés, els clients perdrien el domini i els registres DNS quedarien incorrectes.
     
 2. Per què és necessari DNS en un domini Active Directory?
+
+> Perquè Active Directory fa servir DNS per localitzar els controladors de domini i els serveis del domini. Sense DNS, els clients no poden unir-se al domini, autenticar-se ni trobar el controlador de domini.
     
 3. Quina diferència hi ha entre instal·lar AD DS i promocionar el servidor a controlador de domini?
+
+>Instal·lar AD DS només afegeix al servidor els fitxers i les eines del rol, però el servidor continua sent un servidor normal. La promoció és el pas que el configura realment com a controlador de domini, crea el bosc i el domini, la base de dades d'Active Directory, i configura el DNS.
     
 4. Quin és el nom del domini creat?
+
+>musiccloud.local
     
 5. Quin és el nom NetBIOS del domini?
+
+>MUSICCLOUD
     
 6. Per què no és recomanable que els clients del domini utilitzin un DNS extern com a DNS principal?
-    
+
+>Perquè un DNS extern no coneix els registres interns del domini musiccloud.local ni els registres SRV dels controladors, de manera que els clients no podrien trobar el controlador de domini ni iniciar sessió. Els clients han d'usar el DNS del controlador de domini, i només aquest servidor ha de sortir a internet mitjançant un reenviador.
 

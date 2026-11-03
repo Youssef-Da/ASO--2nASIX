@@ -20,19 +20,27 @@ function Comprovar-Ruta {
         return $false
     }
 }
-foreach ($nom in $nomOU) {
 
-    try {
-        $OU = Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop
-        Write-Host "La OU '$nom' ja existeix a la ruta '$ruta'. No cal crear-la."
-    }
-    catch {
+function Crear-OU {
+    param(
+        [string]$nom,
+        [string]$ruta
+    )
+
+    foreach ($nom in $nomOU) {
+
         try {
-            New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction Stop
-            Write-Host "La OU '$nom' s'ha creat a la ruta '$ruta'."
+            $OU = Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop
+            Write-Host "La OU '$nom' ja existeix a la ruta '$ruta'. No cal crear-la."
         }
         catch {
-            Write-Host "No s'ha pogut crear la OU '$nom': $($_.Exception.Message)"
+            try {
+                New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction Stop
+                Write-Host "La OU '$nom' s'ha creat a la ruta '$ruta'."
+            }
+            catch {
+                Write-Host "No s'ha pogut crear la OU '$nom': $($_.Exception.Message)"
+            }
         }
+    } 
     }
-} 

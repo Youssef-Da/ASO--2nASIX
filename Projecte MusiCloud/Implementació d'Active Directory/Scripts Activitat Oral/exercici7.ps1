@@ -10,23 +10,23 @@ try {
     Get-ADObject -Identity $ruta -ErrorAction Stop | Out-Null
 }
 catch {
-    Write-Host "La ruta '$ruta' no existeix. Comprova la ruta i torna-ho a intentar."
-    exit 1
+    exit
 }
 
 foreach ($nom in $nomOU) {
 
     try {
         $OU = Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop
-        Write-Host "La OU '$nom' ja existeix a la ruta '$ruta'. No cal crear-la."
     }
     catch {
+        $OU = $null
+    }
+    if ($OU -eq $null) {    
         try {
             New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction Stop
-            Write-Host "La OU '$nom' s'ha creat a la ruta '$ruta'."
         }
         catch {
-            Write-Host "No s'ha pogut crear la OU '$nom': $($_.Exception.Message)"
+            continue
         }
     }
 } 

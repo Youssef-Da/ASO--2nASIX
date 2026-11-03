@@ -20,15 +20,6 @@ function Comprovar-Ruta {
         return $false
     }
 }
-
-try {
-    Get-ADObject -Identity $ruta -ErrorAction Stop | Out-Null
-}
-catch {
-    Write-Host "La ruta '$ruta' no existeix. Comprova la ruta i torna-ho a intentar."
-    exit 1
-}
-
 foreach ($nom in $nomOU) {
 
     try {

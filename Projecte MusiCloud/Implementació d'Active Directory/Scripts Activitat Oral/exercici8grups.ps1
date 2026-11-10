@@ -9,3 +9,17 @@ param(
     [Parameter(Mandatory=$false)]
     [string]$categoria = "Security"
 )
+
+function Comprovar-Ruta {
+    param(
+        [string]$ruta
+    )
+
+    try {
+        Get-ADObject -Identity $ruta -ErrorAction Stop | Out-Null
+        return $true
+    }
+    catch {
+        return $false
+    }
+}

@@ -16,3 +16,14 @@ function Comprovar-Ruta {
         return $false
     }
 }
+
+function Crear-Grup {
+    param([string]$nom)
+
+    try {
+        Get-ADGroup -Identity $nom -ErrorAction Stop | Out-Null
+    }
+    catch {
+        New-ADGroup -Name $nom -Path $ruta -GroupScope $scope -GroupCategory $categoria -ErrorAction SilentlyContinue
+    }
+}

@@ -15,3 +15,21 @@ function Comprovar-Ruta {
         return $false
     }
 }
+function Crear-OU {
+    param([string]$nom)
+
+    try {
+        Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop | Out-Null
+    }
+    catch {
+        New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction SilentlyContinue
+    }
+}
+
+if (-not (Comprovar-Ruta)) {
+    exit
+}
+
+if (-not (Test-Path $fitxer)) {
+    exit
+}

@@ -33,3 +33,9 @@ if (-not (Comprovar-Ruta)) {
 if (-not (Test-Path $fitxer)) {
     exit
 }
+
+$OUs = Import-Csv $fitxer
+
+foreach ($ou in $OUs) {
+    Crear-OU -nom $ou.Nom
+}

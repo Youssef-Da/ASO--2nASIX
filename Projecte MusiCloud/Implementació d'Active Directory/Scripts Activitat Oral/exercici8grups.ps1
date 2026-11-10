@@ -27,3 +27,11 @@ function Crear-Grup {
         New-ADGroup -Name $nom -Path $ruta -GroupScope $scope -GroupCategory $categoria -ErrorAction SilentlyContinue
     }
 }
+
+if (-not (Comprovar-Ruta)) {
+    exit
+}
+
+foreach ($nom in $nomGrup) {
+    Crear-Grup -nom $nom
+}

@@ -1,0 +1,6 @@
+SRV,PROTOCOLS
+SRVWEB,https
+SRVWEB,http
+SRVWEB,ftp
+SRVWEB,ftps
+SRVWEB,mail

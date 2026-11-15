@@ -35,9 +35,9 @@ Proposa les **unitats organitzatives (OU)** principals que utilitzaries a MusicC
 |OU_Administracio|Usuaris d'Administració|Gestió centralitzada del departament|
 |OU_SuportTecnic|Usuaris de suport tècnic|Gestió centralitzada del departament|
 |OU_ProduccioMusical|Usuaris de producció musical|Gestió centralitzada del departament|
-|OU_Informatica|Usuaris i comptes tècnics d'Informàtica|Aplicació de polítiques més estrictes als usuaris amb accés administratiu|
+|OU_Informatica|Usuaris i comptes tècnics d'Informàtica| Usuaris amb accés administratiu|
 |OU_Externs|Usuaris externs|Aïllar-los i aplicar restriccions específiques|
-|OU_Servidors|Servidors i comptes de servei|Separar la infraestructura tècnica dels usuaris|
+|OU_Servidors|Servidors|Separar la infraestructura tècnica dels usuaris|
 
 ## 2.1. Organització dels usuaris
 
@@ -190,9 +190,8 @@ MusicCloud
 │   ├── GRP_SuportTecnic
 │   ├── GRP_ProduccioMusical
 │   ├── GRP_Informatica
-│   ├── GRP_CapAdministracio
-│   ├── GRP_CampanyaEstiu
 │   └── GRP_Administradors
+│         └── GRP_CapAdministracio
 │
 ├── Equips
 │   ├── Direccio
@@ -224,7 +223,7 @@ Separar els usuaris en OUs per departament.
 
 **Justificació:**
 
-Permet aplicar polítiques específiques per exemple, restriccions més estrictes a informàtica i delegar l'administració de cada OU al cap de departament, sense afectar la resta de l'organització.
+Permet aplicar polítiques específiques per exemple, restriccions més estrictes a informàtica ja que són usuaris amb poder d'administrador
 
 ---
 
@@ -268,13 +267,43 @@ A partir de les decisions preses durant la sessió, deixa definida la proposta q
 
 ## Estructura d'unitats organitzatives
 
+
 ```text
 MusicCloud
 │
-├── Usuaris (per departament)
-├── Grups (per accessos i projectes)
+├── Usuaris
+│   ├── Direccio
+│   ├── Administracio
+│   ├── SuportTecnic
+│   ├── ProduccioMusical
+│   ├── Informatica
+│   └── Externs
+│
+├── Grups
+│   ├── GRP_Direccio
+│   ├── GRP_Administracio
+│   ├── GRP_SuportTecnic
+│   ├── GRP_ProduccioMusical
+│   ├── GRP_Informatica
+│   └── GRP_Administradors
+│         └── GRP_CapAdministracio
+│
+├── Equips
+│   ├── Direccio
+│   ├── Administracio
+│   ├── SuportTecnic
+│   ├── ProduccioMusical
+│   └── Informatica
+│
 ├── Servidors
+│   ├── SRV_Fitxers
+│   ├── SRV_Backups
+│   └── SRV_Web
+│
 └── ComptesServei
+    ├── SVC_Backup
+    ├── SVC_BBDD
+    └── SVC_Web
 ```
 
 ## Criteri utilitzat per organitzar els objectes

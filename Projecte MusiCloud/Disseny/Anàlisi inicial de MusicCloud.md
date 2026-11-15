@@ -31,12 +31,12 @@ Completa la taula següent.
 
 | Persona | Departament | Funció / responsabilitat | Necessita privilegis especials? Per què? |
 |---|---|---|---|
-| Aina Ciurans | Direcció | Gestió general de l'empresa | Sí, accés total als recursos de Direcció|
-| Laia Macias | Cap d'Administració| Coordina el departament, factures/contractes | Sí, és l'única amb permisos de lectura i escritura a gestio_departament |
+| Aina Ciurans | Direcció | Gestió general de l'empresa | No, únicament necesita permisos per visualitzar tot|
+| Laia Macias | Administració| Coordina el departament, factures/contractes | Sí, és l'única amb permisos de lectura i escritura a gestio_departament |
 | Dídac Gassó | Administració | Factures, contractes, documentació | No, accés estàndard del departament |
-| Lluïsa Richart | Cap del suport tècnic | Coordina incidències i manteniment | Sí, permis de lectura i escritura exclusiu agestio_departament i scripts |
-| Meritxell Reglat | Cap de producció musical | Coordina gestió de continguts | Sí, permis de lectura i escitura exclusiu a gestio_departament |
-| Talia Costas | Cap d'Informàtica | Suport i administració del sistema | Sí, accés ADM als recursos crítics com els backups, logs, configuracions etc... |
+| Lluïsa Richart | Suport tècnic | Coordina incidències i manteniment | Sí, permis de lectura i escritura exclusiu agestio_departament i scripts |
+| Meritxell Reglat | Producció musical | Coordina gestió de continguts | Sí, permis de lectura i escitura exclusiu a gestio_departament |
+| Talia Costas | Informàtica | Suport i administració del sistema | Sí, accés ADM als recursos crítics com els backups, logs, configuracions etc... |
 | Alex Soriano | Informàtica | Suport tècnic del sistema | Sí, per la naturalesa tècnica del departament |
 | Pere Espinalt | Extern | Col·laboració puntual/externa | No, accés molt limitat, només a intercanvi |
 
@@ -129,7 +129,7 @@ David → lectura/escriptura
 
 Què passaria si l'empresa tingués **100 treballadors** amb el mateix tipus d'accés?
 
-Amb 100 treballadors caldria configurar el mateix permís 100 vegades de manera manual, molta feina repetitiva, alt risc d'errors i problemes entre usuaris.
+Amb 100 treballadors caldria configurar el mateix permís 100 vegades de manera manual, molta feina repetitiva, alt risc d'errors i problemes entre usuaris com per exemple que un depertament elimini arxius d'un altre departament per error.
 
 ### 4.2.
 
@@ -228,7 +228,7 @@ A partir de l'organització de l'empresa, proposa els primers conjunts de person
 
 |Nom proposat|Qui hi pertanyeria?|Per què existeix aquest conjunt?|
 |---|---|---|
-|GRP_Direccio|Aina Ciurans, Rut Tornil|Accés als recursos exclusius de Direcció|
+|GRP_Direccio|Aina Ciurans, Rut Tornil|Accés als recursos exclusius de Direcció i a totes les carpetes de l'empresa importants o relevants|
 |GRP_Administracio|Dídac Gassó, Laia Macias|Accés als recursos compartits del departament d'Administració|
 |GRP_SuportTecnic|Estel Birosta, Aina Zuriguel, Lluïsa Richart|Accés als recursos del departament de Suport tècnic|
 |GRP_ProduccioMusical|Roser Alberch, Guillem Adella, Meritxell Reglat, Alícia Monclús, Carles Molins, Eulàlia Galcera| Accés als recursos del departament de Producció musical|
@@ -246,11 +246,11 @@ No
 
 Per què?
 
-Perquè com a cap de departament necessita permisos addicionals a `gestio_departament` que la resta de membres del departament no tenen. Pertànyer només al grup general no li donaria aquest accés.
+Perquè com a cap de departament necessita permisos adicionals a `gestio_departament` que la resta de membres del departament no tenen. Pertànyer només al grup general no li donaria aquest accés.
 
 Quina possible solució proposes?
 
-Crear un grup addicional específic, per exemple `GRP_CapAdministracio`, i afegir-hi Laia a més del grup general `GRP_Administracio`. Així acumula els permisos del departament i els permisos extra de responsable.
+Fer que el grup GRP_CapAdministracio formi part de GRP_Administracio. D’aquesta manera, el responsable hereda els permisos associats a GRP_Administracio i, a més, conserva els permisos específics assignats a GRP_CapAdministracio.
 
 # 9. Un altre cas
 

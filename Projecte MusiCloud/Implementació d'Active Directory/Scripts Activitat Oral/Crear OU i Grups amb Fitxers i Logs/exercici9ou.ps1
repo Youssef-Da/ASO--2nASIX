@@ -3,8 +3,15 @@ param(
     [Parameter(Mandatory=$true)]
     [string]$fitxer = ".\projectemusicloud\Implementació d'Active Directory\Scripts Activitat Oral\Grups\ou_exercici9.csv",
     [Parameter(Mandatory=$true)]
-    [string]$ruta   = "DC=musiccloud,DC=local"
+    [string]$ruta   = "DC=musiccloud,DC=local",
+    [string]$log = ".\Projecte MusiCloud\Implementació d'Active Directory\Scripts Activitat Oral\Crear OU i Grups amb Fitxers i Logs\registre.log"
 )
+
+function Escriure-log {
+    param([string]$missatge)
+    $data = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    Add-Content -Path $log -Value "$data [LOG] $missatge"
+}
 
 function Comprovar-Ruta {
     try {

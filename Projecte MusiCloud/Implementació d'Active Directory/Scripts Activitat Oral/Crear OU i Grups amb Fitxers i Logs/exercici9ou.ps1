@@ -30,9 +30,14 @@ function Crear-OU {
         Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop | Out-Null
         Escriure-Log "L'OU '$nom' ja existeix a la ruta '$ruta'"
     }
-    try {
-        New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction SilentlyContinue
-        Escriure-Log "S'ha creat l'OU '$nom' a la ruta '$ruta'"
+    catch {
+        try {
+            New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction SilentlyContinue
+            Escriure-Log "S'ha creat l'OU '$nom' a la ruta '$ruta'"
+        }
+        catch {
+            Escriure-Log "ERR" "No s'ha pogut crear l'OU '$nom'"
+        }
     }
 }
 

@@ -34,3 +34,42 @@ try {
     Write-Error "$data [ERR] Error en llegir el fitxer" 2>>registre.log
     exit
 }
+
+
+#Usuaris
+
+New-ADUser `
+    -Name "Aina Ciurans" `
+    -SamAccountName "aciuransx" `
+    -DisplayName "Aina Ciurans" `
+    -UserPrincipalName "aciuransx@musiccloud.local" `
+    -EmailAddress "aciurans@musiccloud.local" `
+    -AccountPassword (ConvertTo-SecureString "musiccloud" -AsPlainText) `
+    -Enabled $true `
+    -ChangePasswordAtLogon $true `
+    -Path "OU=Administracio,OU=Uusaris,OU=MusiiCloud,DC=local"
+
+Set-ADUser -Identity "aciuransx" -Enable $false
+
+#Les dos funcionarian
+
+Disable-ADAccount -Identity "aciuransx"
+
+#Contrasenya
+
+$novaContrasenya = Read-Host "Introdueix la nova contrasenya" -AsSecureString
+
+Set-ADAccountPassword -Identity "aciuransx" 
+    -Reset
+    -NewPassword $novaContrasenya
+
+#Grups
+
+Add-ADGroupMember `
+    -Identity "GG-Comercial" `
+    -Members "lvidal"
+
+
+#Saber quin grup pertany un usuari
+
+Get-ADPrincipalGroupMembership -Identity "aciurans"

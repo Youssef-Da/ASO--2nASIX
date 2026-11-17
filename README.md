@@ -3,10 +3,14 @@
 ## Youssef Dahmouni Sadki
 
 ## Sobre mi
-Soc en Youssef, estudiant de sistemes i administració de xarxes. Aquest repositori forma part de la meva formació pràctica per consolidar coneixements en la gestió d'infraestructures de directori.
+Soc en Youssef, estudiant de sistemes i administració de xarxes. Aquest repositori forma part de la formació per consolidar coneixements en la gestió d'infraestructures de directori.
 
 ## Objectiu
 L'objectiu principal d'aquest repositori és documentar i emmagatzemar tot el procés de disseny, implementació i administració d'una infraestructura per a una empresa fictícia anomenada MusicCloud. 
+
+## Motivació
+
+El meu objectiu i motivació és anar a la universitat per convertir-me en enginyer i poder utilitzar tot el coneixement que he adquirit per desenvolupar projectes que millorin la vida de les persones i ajudin a crear un món millor.
 
 ## Contingut del Repositori
 En aquest repositori hi trobaràs:

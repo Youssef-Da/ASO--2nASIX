@@ -19,6 +19,7 @@ function Comprovar-Ruta {
         return $true
     }
     catch {
+        Escriure-log "La ruta especificada no existeix: $ruta"
         return $false
     }
 }
@@ -27,9 +28,11 @@ function Crear-OU {
 
     try {
         Get-ADOrganizationalUnit -Identity "OU=$nom,$ruta" -ErrorAction Stop | Out-Null
+        Escriure-Log "L'OU '$nom' ja existeix a la ruta '$ruta'"
     }
     catch {
         New-ADOrganizationalUnit -Name $nom -Path $ruta -ErrorAction SilentlyContinue
+        Escriure-Log "S'ha creat l'OU '$nom' a la ruta '$ruta'"
     }
 }
 
@@ -38,6 +41,7 @@ if (-not (Comprovar-Ruta)) {
 }
 
 if (-not (Test-Path $fitxer)) {
+    Escriure-Log "ERR" "No s'ha trobat el fitxer '$fitxer'"
     exit
 }
 

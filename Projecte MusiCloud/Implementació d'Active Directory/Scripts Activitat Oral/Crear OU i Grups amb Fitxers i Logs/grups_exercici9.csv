@@ -1,0 +1,11 @@
+Nom,Ruta,GrupPare
+GRP_Direccio,OU=Grups,
+GRP_Administracio,OU=Grups,
+GRP_SuportTecnic,OU=Grups,
+GRP_ProduccioMusical,OU=Grups,
+GRP_Informatica,OU=Grups,
+GRP_Administradors,OU=Grups,
+GRP_CapAdministracio,OU=Grups,GRP_Administracio
+GRP_CapSuportTecnic,OU=Grups,GRP_SuportTecnic
+GRP_CapProdMusical,OU=Grups,GRP_ProduccioMusical
+GRP_CapInformatica,OU=Grups,GRP_Informatica

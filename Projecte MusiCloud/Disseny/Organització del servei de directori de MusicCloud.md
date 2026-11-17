@@ -282,11 +282,14 @@ MusicCloud
 ├── Grups
 │   ├── GRP_Direccio
 │   ├── GRP_Administracio
+|   |     └── GRP_CapAdministració
 │   ├── GRP_SuportTecnic
+|   |     └── GRP_CapSuportTecnic
 │   ├── GRP_ProduccioMusical
+|   |     └── GRP_CapProdMusical
 │   ├── GRP_Informatica
+|   |     └── GRP_CapInformatica
 │   └── GRP_Administradors
-│         └── GRP_CapAdministracio
 │
 ├── Equips
 │   ├── Direccio

@@ -1,6 +1,17 @@
-Departaments
-Direcció
-Administració
-Suport tècnic
-Producció musical
-Informàtica
+Nom,Ruta
+Usuaris,
+Grups,
+Equips,
+Servidors,
+ComptesServei,
+Direccio,OU=Usuaris
+Administracio,OU=Usuaris
+SuportTecnic,OU=Usuaris
+ProduccioMusical,OU=Usuaris
+Informatica,OU=Usuaris
+Externs,OU=Usuaris
+Direccio,OU=Equips
+Administracio,OU=Equips
+SuportTecnic,OU=Equips
+ProduccioMusical,OU=Equips
+Informatica,OU=Equips

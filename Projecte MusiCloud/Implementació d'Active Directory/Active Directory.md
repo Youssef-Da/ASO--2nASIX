@@ -107,4 +107,4 @@ Opció escollida:
 
 Justifiqueu breument l’ordre escollit.  
 
-He escollit aquest ordre perquè 
+He escollit aquest ordre perquè primer cal preparar i configurar el servidor xarxa, AD DS, DNS abans de crear el domini. Un cop el domini funciona, es crea l'estructura interna OU, grups, usuaris i per últim es connecten els clients, ja que necessiten que tot estigui fet abans.

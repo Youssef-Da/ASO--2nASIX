@@ -45,14 +45,14 @@ Completa la taula següent.
 
 Quines diferències observes entre un **treballador**, un **departament** i una **funció o responsabilitat**?
 
-El treballador és la persona concreta, la identitat individual dins el sistema. El departament és el grup organitzatiu al qual pertany el treballador. I la funció o responsabilitat és el rol que exerceix un treballador, per exemple el cap de departament, que determina permisos concrets més enllà dels del departament.
+> El treballador és la persona concreta, la identitat individual dins el sistema. El departament és el grup organitzatiu al qual pertany el treballador. I la funció o responsabilitat és el rol que exerceix un treballador, per exemple el cap de departament, que determina permisos concrets més enllà dels del departament.
 
 
 **Hi ha persones que, pel seu càrrec o funció, necessiten accessos diferents dels altres membres del seu departament?**
 
 Posa'n algun exemple:
 
-Sí per exemple els caps de departament que tenen accés exclusiu a gestio_departament, i el personal d'Informàtica, que té accés d'administrador a recursos de sistema que la resta de departaments no té.
+> Sí per exemple els caps de departament que tenen accés exclusiu a gestio_departament, i el personal d'Informàtica, que té accés d'administrador a recursos de sistema que la resta de departaments no té.
 
 
 # 2. Recursos de l'empresa
@@ -129,19 +129,19 @@ David → lectura/escriptura
 
 Què passaria si l'empresa tingués **100 treballadors** amb el mateix tipus d'accés?
 
-Amb 100 treballadors caldria configurar el mateix permís 100 vegades de manera manual, molta feina repetitiva, alt risc d'errors i problemes entre usuaris com per exemple que un depertament elimini arxius d'un altre departament per error.
+> Amb 100 treballadors caldria configurar el mateix permís 100 vegades de manera manual, molta feina repetitiva, alt risc d'errors i problemes entre usuaris com per exemple que un depertament elimini arxius d'un altre departament per error.
 
 ### 4.2.
 
 Què passaria cada vegada que s'incorporés una persona nova?
 
-Cada nova incorporació obligaria a configurar manualment, un per un, tots els permisos que necessita en cada recurs.
+> Cada nova incorporació obligaria a configurar manualment, un per un, tots els permisos que necessita en cada recurs.
 
 ### 4.3.
 
 Què passaria quan una persona canviés de departament?
 
-Caldria revisar i modificar manualment tots els permisos individuals d'aquella persona a tots els recursos afectats, amb risc d'oblidar-ne algun.
+> Caldria revisar i modificar manualment tots els permisos individuals d'aquella persona a tots els recursos afectats, amb risc d'oblidar-ne algun.
 
 ### 4.4.
 
@@ -149,11 +149,11 @@ Proposa una manera de gestionar aquestes persones conjuntament.
 
 No cal que coneguis encara el nom tècnic de la solució.
 
-Agrupar les persones que tenen les mateixes necessitats i assignar el permís una sola vegada a aquest grup, en lloc de fer-ho persona per persona.
+> Agrupar les persones que tenen les mateixes necessitats i assignar el permís una sola vegada a aquest grup, en lloc de fer-ho persona per persona.
 
 # 5. Canvis a MusicCloud
 
-Ara es produeixen aquests tres canvis:
+> Ara es produeixen aquests tres canvis:
 
 ### Cas A
 
@@ -161,11 +161,11 @@ Dídac deixa Administració i passa a Producció musical.
 
 Quins accessos hauria de perdre?
 
-Hauria de perdre acces a compartida i documentacio_interna d'Administració
+> Hauria de perdre acces a compartida i documentacio_interna d'Administració
 
 Quins accessos hauria d'obtenir?
 
-Hauria d'obtenir acces a compartida, artistes i cataleg de Producció musical
+> Hauria d'obtenir acces a compartida, artistes i cataleg de Producció musical
 
 ### Cas B
 
@@ -173,7 +173,7 @@ S'incorpora una nova treballadora al departament d'Administració.
 
 Quins accessos caldria configurar?
 
-Hauria de configurar accés de lectura i escritura a compartida i documentacio_interna del departament, accessos comuns intercanvi, plantilles, comunicats i crear-li la seva carpeta personal a `/empresa/usuaris`
+> Hauria de configurar accés de lectura i escritura a compartida i documentacio_interna del departament, accessos comuns intercanvi, plantilles, comunicats i crear-li la seva carpeta personal a `/empresa/usuaris`
 
 ### Cas C
 
@@ -181,7 +181,7 @@ Pere Espinalt deixa de col·laborar amb MusicCloud.
 
 Què hauríem de fer amb els seus accessos?
 
-Revocar tots els seus accessos especialment a intercanvi i eliminar el seu compte d'usuari, ja que no ha de conservar cap accés un cop finalitzada la col·laboració
+> Revocar tots els seus accessos especialment a intercanvi i eliminar el seu compte d'usuari, ja que no ha de conservar cap accés un cop finalitzada la col·laboració
 
 # 6. Busquem una solució millor
 
@@ -206,19 +206,19 @@ Administració → carpeta_administracio → L/E
 
 Quin avantatge té aquesta solució respecte a donar permisos persona per persona?
 
-L'avantatge és que els permisos es defineixen una sola vegada per al conjunt, en lloc de repetir-los per a cada persona. Això redueix errors, estalvia temps i facilita el manteniment del sistema.
+> L'avantatge és que els permisos es defineixen una sola vegada per al conjunt, en lloc de repetir-los per a cada persona. Això redueix errors, estalvia temps i facilita el manteniment del sistema.
 
 ### 6.2.
 
 Si Dídac passa d'Administració a Producció musical, què caldria modificar?
 
-Només caldria treure'l del conjunt `Administració` i afegir-lo al conjunt `Producció musical`. Els permisos ja estan definits als conjunts, no cal tocar-los individualment.
+> Només caldria treure'l del conjunt `Administració` i afegir-lo al conjunt `Producció musical`. Els permisos ja estan definits als conjunts, no cal tocar-los individualment.
 
 ### 6.3.
 
 Com anomenaries aquests conjunts de persones?
 
-Aquests conjunts ho anomenaria grups.
+> Aquests conjunts ho anomenaria grups.
 
 # 7. Primera proposta per a MusicCloud
 
@@ -242,15 +242,15 @@ Laia treballa al departament d'Administració, però també és la responsable d
 
 És suficient que pertanyi només al conjunt `Administració`?
 
-No
+> No
 
 Per què?
 
-Perquè com a cap de departament necessita permisos adicionals a `gestio_departament` que la resta de membres del departament no tenen. Pertànyer només al grup general no li donaria aquest accés.
+> Perquè com a cap de departament necessita permisos adicionals a `gestio_departament` que la resta de membres del departament no tenen. Pertànyer només al grup general no li donaria aquest accés.
 
 Quina possible solució proposes?
 
-Fer que el grup GRP_CapAdministracio formi part de GRP_Administracio. D’aquesta manera, el responsable hereda els permisos associats a GRP_Administracio i, a més, conserva els permisos específics assignats a GRP_CapAdministracio.
+> Fer que el grup GRP_CapAdministracio formi part de GRP_Administracio. D’aquesta manera, el responsable hereda els permisos associats a GRP_Administracio i, a més, conserva els permisos específics assignats a GRP_CapAdministracio.
 
 # 9. Un altre cas
 
@@ -262,11 +262,11 @@ Campanya Estiu
 
 Creus que hauríem de canviar-les de departament?
 
-No
+> No
 
 Si no, com podríem donar-los accés als recursos del projecte?
 
-Creant un grup específic per al projecte per exemple GRP_CampanyaEstiu que reculli els membres participants, independentment del seu departament d'origen, i assignant els permisos del recurs del projecte a aquest grup. Així mantenen el seu departament original i, a més, obtenen l'accés temporal al projecte.
+> Creant un grup específic per al projecte per exemple GRP_CampanyaEstiu que reculli els membres participants, independentment del seu departament d'origen, i assignant els permisos del recurs del projecte a aquest grup. Així mantenen el seu departament original i, a més, obtenen l'accés temporal al projecte.
 
 # 10. Conclusions
 
@@ -306,11 +306,11 @@ Analitza aquesta afirmació:
 
 Explica amb les teves paraules què significa.
 
-Significa que a cada usuari se li han de donar únicament els accessos que necessita per a les seves tasques diàries, ni més ni menys. Evitar donar permisos per si de cas redueix riscos de seguretat i d'errors accidentals o intencionats.
+> Significa que a cada usuari se li han de donar únicament els accessos que necessita per a les seves tasques diàries, ni més ni menys. Evitar donar permisos per si de cas redueix riscos de seguretat i d'errors accidentals o intencionats.
 
 Posa un exemple relacionat amb MusicCloud.
 
-Un treballador de Producció musical no necessita accés a `/empresa/departaments/administracio`, ja que no forma part de les seves funcions, donar-li aquest accés violaria el principi de mínim privilegi.
+> Un treballador de Producció musical no necessita accés a `/empresa/departaments/administracio`, ja que no forma part de les seves funcions, donar-li aquest accés violaria el principi de mínim privilegi.
 
 # 12. Pregunta final
 
@@ -322,4 +322,4 @@ Quina de les dues estratègies consideres més adequada?
 
 Justifica la resposta.
 
-Amb 500 treballadors, assignar permisos un per un seria inviable, massa temps, massa risc d'error i molt difícil de mantenir a llarg termini. Organitzant els usuaris en grups segons les seves necessitats, els permisos es gestionen de manera centralitzada, escalable, i els canvis es resolen simplement movent la persona d'un grup a un altre.
+> Amb 500 treballadors, assignar permisos un per un seria inviable, massa temps, massa risc d'error i molt difícil de mantenir a llarg termini. Organitzant els usuaris en grups segons les seves necessitats, els permisos es gestionen de manera centralitzada, escalable, i els canvis es resolen simplement movent la persona d'un grup a un altre.

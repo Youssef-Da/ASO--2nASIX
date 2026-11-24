@@ -21,7 +21,7 @@ Indica quins tipus d'objectes consideres que ha de contenir el servei de directo
 
 Hi afegiries algun altre tipus d'objecte?
 
-Sí, els ordinadors/equips i les carpetes compartides com a recursos.
+> Sí, els ordinadors/equips i les carpetes compartides com a recursos.
 
 ---
 
@@ -75,13 +75,13 @@ Indica quina opció utilitzaries principalment en cada cas.
 
 **OU:**
 
-És una unitat d'organització que serveix per ubicar objectes de manera jeràrquica i aplicar-hi polítiques. Un objecte normalment nomes pot estar en una OU.
+> És una unitat d'organització que serveix per ubicar objectes de manera jeràrquica i aplicar-hi polítiques. Un objecte normalment nomes pot estar en una OU.
 
 ---
 
 **Grup:**
 
-És un conjunt de membres que comparteixen una mateixa necessitat com la necessitat d'accés a recursos. Un usuari pot pertànyer a diferents grups alhora, sense importar la seva OU.
+> És un conjunt de membres que comparteixen una mateixa necessitat com la necessitat d'accés a recursos. Un usuari pot pertànyer a diferents grups alhora, sense importar la seva OU.
 
 ---
 
@@ -102,17 +102,17 @@ Indica:
 
 **En quina OU ubicaries el seu compte?**
 
-Estaria en la OU_Administració, perquè representa el seu departament real dins l'organització.
+> Estaria en la OU_Administració, perquè representa el seu departament real dins l'organització.
 
 **A quins grups podria pertànyer?**
 
-Podria pertanya al grup GRP_Administracio per tenir accés a les carpetes del departament i a GRP_CampanyaEstiu per tenir accés als recursos del projecte.
+> Podria pertanya al grup GRP_Administracio per tenir accés a les carpetes del departament i a GRP_CampanyaEstiu per tenir accés als recursos del projecte.
 
 ---
 
 ### Per què no és contradictori que estigui en una OU però pertanyi a diversos grups?
 
-Perquè la OU ens indica on està ubicat, la seva posició en l'organització, mentres que els grups indiquen a quines carpetes o recursos tenen accés
+> Perquè la OU ens indica on està ubicat, la seva posició en l'organització, mentres que els grups indiquen a quines carpetes o recursos tenen accés
 
 
 ---
@@ -121,13 +121,13 @@ Perquè la OU ens indica on està ubicat, la seva posició en l'organització, m
 
 Explica breument què entens per **servei de directori**.
 
-El servei de directori és un sistema centralitzat que emmagatzema i organitza informació com els usuaris, grups, ordinadors, servidors... i ens permet consultarla, autenticarla i gestionarla des d'un únic punt.
+> El servei de directori és un sistema centralitzat que emmagatzema i organitza informació com els usuaris, grups, ordinadors, servidors... i ens permet consultarla, autenticarla i gestionarla des d'un únic punt.
 
 ---
 
 Quin problema resol a MusicCloud?
 
-Resol el problema d'haver de gestionar usuaris i permisos de manera dispersa a cada servidor o servei per separat. Tamnbé centralitza la informació dels usuaris i els accessos, facilitant l'administració.
+> Resol el problema d'haver de gestionar usuaris i permisos de manera dispersa a cada servidor o servei per separat. Tamnbé centralitza la informació dels usuaris i els accessos, facilitant l'administració.
 
 ---
 
@@ -219,21 +219,21 @@ Escull **dues decisions** del teu DIT que consideris importants i justifica-les.
 
 ### Decisió 1
 
-Separar els usuaris en OUs per departament.
+> Separar els usuaris en OUs per departament.
 
 **Justificació:**
 
-Permet aplicar polítiques específiques per exemple, restriccions més estrictes a informàtica ja que són usuaris amb poder d'administrador
+> Permet aplicar polítiques específiques per exemple, restriccions més estrictes a informàtica ja que són usuaris amb poder d'administrador
 
 ---
 
 ### Decisió 2
 
-Crear una OU separada per als comptes de servidors i comptes de servei, independent de la dels usuaris.
+> Crear una OU separada per als comptes de servidors i comptes de servei, independent de la dels usuaris.
 
 **Justificació:**
 
-Els comptes tècnics tenen una durada i unes polítiques de seguretat diferents dels usuaris humans, com les contrasenyes, auditoria, permisos entre altres. Separar-los evita aplicar-hi per error polítiques pensades per a persones i facilita la seva gestió tècnica.
+> Els comptes tècnics tenen una durada i unes polítiques de seguretat diferents dels usuaris humans, com les contrasenyes, auditoria, permisos entre altres. Separar-los evita aplicar-hi per error polítiques pensades per a persones i facilita la seva gestió tècnica.
 
 ---
 
@@ -243,19 +243,19 @@ Respon breument.
 
 ### a) Per què no seria una bona idea guardar tots els usuaris, grups, equips i servidors al mateix nivell sense organitzar-los?
 
-Seria molt difícil aplicar polítiques diferenciades, delegar l'administració, cercar objectes o mantenir el sistema a mesura que creix el nombre d'usuaris i recursos; augmentaria el desordre i el risc d'errors.
+> Seria molt difícil aplicar polítiques diferenciades, delegar l'administració, cercar objectes o mantenir el sistema a mesura que creix el nombre d'usuaris i recursos; augmentaria el desordre i el risc d'errors.
 
 ---
 
 ### b) Per què no hauríem d'utilitzar les OU per substituir els grups de permisos?
 
-Perquè un usuari només pot pertànyer a una OU, mentre que sovint necessita accedir a diversos recursos simultàniament (departament, projectes, rol especial). Els grups permeten aquesta pertinença múltiple de forma flexible; les OU no estan pensades per assignar permisos, sinó per organitzar i aplicar polítiques.
+> Perquè un usuari només pot pertànyer a una OU, mentre que sovint necessita accedir a diversos recursos simultàniament (departament, projectes, rol especial). Els grups permeten aquesta pertinença múltiple de forma flexible; les OU no estan pensades per assignar permisos, sinó per organitzar i aplicar polítiques.
 
 ---
 
 ### c) Si MusicCloud passa de 14 a 500 treballadors, quina característica del disseny que has fet avui facilitarà més l'administració?
 
-La combinació d'OUs per departament que permeten delegar administració i aplicar polítiques per blocs amb grups per necessitat d'accés que permeten assignar permisos de manera centralitzada i escalable, en lloc de gestionar cada usuari individualment.
+> La combinació d'OUs per departament que permeten delegar administració i aplicar polítiques per blocs amb grups per necessitat d'accés que permeten assignar permisos de manera centralitzada i escalable, en lloc de gestionar cada usuari individualment.
 
 ---
 
@@ -311,10 +311,10 @@ MusicCloud
 
 ## Criteri utilitzat per organitzar els objectes
 
-S'ha organitzat en OUs seguint l'estructura departamental real de l'empresa reflectint l'organigrama, i separant clarament els objectes humans usuaris dels objectes tècnics servidors, comptes de servei.
+> S'ha organitzat en OUs seguint l'estructura departamental real de l'empresa reflectint l'organigrama, i separant clarament els objectes humans usuaris dels objectes tècnics servidors, comptes de servei.
 
 ---
 
 ## Criteri utilitzat per diferenciar OU i grups
 
-Les OU s'utilitzen per a la ubicació administrativa i l'aplicació de polítiques un objecte, una OU. Els grups s'utilitzen per a l'assignació de permisos i accessos a recursos, permetent que un mateix usuari pertanyi a múltiples grups segons les seves necessitats reals de treball.
+> Les OU s'utilitzen per a la ubicació administrativa i l'aplicació de polítiques un objecte, una OU. Els grups s'utilitzen per a l'assignació de permisos i accessos a recursos, permetent que un mateix usuari pertanyi a múltiples grups segons les seves necessitats reals de treball.
